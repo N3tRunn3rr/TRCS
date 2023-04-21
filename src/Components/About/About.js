@@ -1,4 +1,4 @@
-import Testimonials from './components/About/Testimonials';
+import Testimonials from './Testimonials';
 import React from 'react';
 
 export default function About() {
