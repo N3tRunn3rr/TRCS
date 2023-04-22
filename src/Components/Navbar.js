@@ -1,14 +1,15 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import '../styles/Navbar.css';
 
 const Navigation = () => {
   return (
-    <Navbar bg="light" variant="dark" expand="lg">
+    <Navbar bg="primary" variant="dark" expand="lg">
     <Container>
       <Navbar.Brand href="/">
         <img
-            src="../assets/header_left.jpg"
+            src="/header_left.jpg"
             width="30"
             height="30"
             className="d-inline-block align-top"
@@ -35,6 +36,12 @@ const Navigation = () => {
           </Nav.Link>
             <Nav.Link as={Link} to="/contact">
             Contact
+            </Nav.Link>
+            <Nav.Link as={Link} to="/privacy">
+            Privacy
+            </Nav.Link>
+            <Nav.Link as={Link} to="/links">
+            Links
             </Nav.Link>
         </Nav>
       </Navbar.Collapse>
