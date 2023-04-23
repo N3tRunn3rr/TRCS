@@ -34,9 +34,6 @@ const Navigation = () => {
           <Nav.Link as={Link} to="/services">
             Services
           </Nav.Link>
-            <Nav.Link as={Link} to="/contact">
-            Contact
-            </Nav.Link>
             <Nav.Link as={Link} to="/privacy">
             Privacy
             </Nav.Link>
