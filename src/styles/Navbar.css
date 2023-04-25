@@ -14,7 +14,10 @@
   .nav-link {
     color: white;
     font-weight: bold;
-  }
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   
   .nav-link:hover,
   .nav-link:focus {
