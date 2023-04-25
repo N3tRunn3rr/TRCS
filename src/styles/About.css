@@ -1,22 +1,54 @@
 body {
-    background-color: #3b5998;
-    font-family: Arial, sans-serif;
-    color: #fff;
-  }
+  background-color: #3b5998;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
 
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .aboutus {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-  }
+h1 {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+text-align: center;
+}
+
+p {
+font-size: 1.2rem;
+line-height: 1.5;
+margin-bottom: 2rem;
+text-align: center;
+}
+
+.about-p {
+justify-content: center;
+align-items: center;
+padding: 0px 20px 0px 20px;
+}
+
+ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+li {
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+}
+
+a {
+color: #fff;
+text-decoration: none;
+}
+
+a:hover {
+color: #dfe3ee;
+text-decoration: underline;
+}
+
+.contact {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-top: 2rem;
+}
   
