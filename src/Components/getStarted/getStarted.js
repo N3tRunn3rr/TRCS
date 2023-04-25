@@ -9,18 +9,18 @@ const GetStarted = () => {
                 <label for="sellerName">Owner: </label>
                 <input type="text" className="form-control" id="sellerName" placeholder="" />
                     <div className="marriage-status">
-                        <input type="radio" value="Married" name="status" /> Married
-                        <input type="radio" value="Single" name="status" /> Single
-                        <input type="radio" value="Divorced" name="status" /> Divorced
-                        <input type="radio" value="Widower" name="status" /> Widower
+                        <input type="radio" value="Married" name="status" className="radio"/> Married
+                        <input type="radio" value="Single" name="status" className="radio"/> Single
+                        <input type="radio" value="Divorced" name="status" className="radio"/> Divorced
+                        <input type="radio" value="Widower" name="status" className="radio"/> Widower
                     </div> 
                 <label for="co-owner">Co-Owner: </label>
                 <input type="text" className="form-control" id="co-owner" placeholder="" />
                     <div className="marriage-status">
-                        <input type="radio" value="Married" name="co-status" /> Married
-                        <input type="radio" value="Single" name="co-status" /> Single
-                        <input type="radio" value="Divorced" name="co-status" /> Divorced
-                        <input type="radio" value="Widower" name="co-status" /> Widower
+                        <input type="radio" value="Married" name="co-status" className="radio"/> Married
+                        <input type="radio" value="Single" name="co-status" className="radio"/> Single
+                        <input type="radio" value="Divorced" name="co-status" className="radio"/> Divorced
+                        <input type="radio" value="Widower" name="co-status" className="radio"/> Widower
                     </div> 
                 <label for="address">Address: </label>
                 <input type="text" className="form-control" id="address" placeholder="" />
@@ -358,18 +358,18 @@ const GetStarted = () => {
                 <label for="buyerName">Buyer 1 Name: </label>
                 <input type="text" className="form-control" id="buyerName" placeholder="" />
                     <div className="marriage-status">
-                        <input type="radio" value="Married" name="buyer-status" /> Married
-                        <input type="radio" value="Single" name="buyer-status" /> Single
-                        <input type="radio" value="Divorced" name="buyer-status" /> Divorced
-                        <input type="radio" value="Widower" name="buyer-status" /> Widower
+                        <input type="radio" value="Married" name="buyer-status" className="radio"/> Married
+                        <input type="radio" value="Single" name="buyer-status" className="radio"/> Single
+                        <input type="radio" value="Divorced" name="buyer-status" className="radio"/> Divorced
+                        <input type="radio" value="Widower" name="buyer-status" className="radio"/> Widower
                     </div> 
                 <label for="co-buyer">Buyer 2 Name: </label>
                 <input type="text" className="form-control" id="co-buyer" placeholder="" />
                     <div className="marriage-status">
-                        <input type="radio" value="Married" name="co-buyer" /> Married
-                        <input type="radio" value="Single" name="co-buyer" /> Single
-                        <input type="radio" value="Divorced" name="co-buyer" /> Divorced
-                        <input type="radio" value="Widower" name="co-buyer" /> Widower
+                        <input type="radio" value="Married" name="co-buyer" className="radio"/> Married
+                        <input type="radio" value="Single" name="co-buyer" className="radio"/> Single
+                        <input type="radio" value="Divorced" name="co-buyer" className="radio"/> Divorced
+                        <input type="radio" value="Widower" name="co-buyer" className="radio"/> Widower
                     </div> 
                 <label for="address">Address: </label>
                 <input type="text" className="form-control" id="address" placeholder="" />
@@ -1035,9 +1035,9 @@ const GetStarted = () => {
                 <input type="text" className="form-control" id="resortPhone" placeholder="" />
                 <label for="ownershipStatus">Type of Ownership</label>
                     <div className="ownership-status">
-                        <input type="radio" value="Deeded" name="ownership-status" /> Deeded
-                        <input type="radio" value="Lease/Right to Use" name="ownership-status" /> Lease/Right to Use
-                        <input type="radio" value="Don't Know" name="ownership-status" /> Don't Know
+                        <input type="radio" value="Deeded" name="ownership-status" className="radio"/> Deeded
+                        <input type="radio" value="Lease/Right to Use" name="ownership-status" className="radio"/> Lease/Right to Use
+                        <input type="radio" value="Don't Know" name="ownership-status" className="radio"/> Don't Know
                     </div> 
                 <label for="rtu">If RTU, Expiration Date: </label>
                 <input type="text" className="form-control" id="rtu" placeholder="" />
@@ -1046,10 +1046,10 @@ const GetStarted = () => {
                 <label for="pointsNumber">Points #: </label>
                 <input type="text" className="form-control" id="pointsNumber" placeholder="" />
                     <div className="management-status">
-                        <input type="radio" value="Float" name="management-status" /> Float
-                        <input type="radio" value="Fixed" name="management-status" /> Fixed
-                        <input type="radio" value="Flex" name="management-status" /> Flex
-                        <input type="radio" value="Other" name="management-status" /> Other
+                        <input type="radio" value="Float" name="management-status" className="radio"/> Float
+                        <input type="radio" value="Fixed" name="management-status" className="radio"/> Fixed
+                        <input type="radio" value="Flex" name="management-status" className="radio"/> Flex
+                        <input type="radio" value="Other" name="management-status" className="radio"/> Other
                     </div> 
                 <label for="mgmtCompany">Management Company Name: </label>
                 <input type="text" className="form-control" id="mgmtCompany" placeholder="" />
@@ -1078,9 +1078,9 @@ const GetStarted = () => {
                     </div>
                 <label for="closingCosts">Closing Costs will be paid by : </label>
                     <div className="closingCosts">
-                        <input type="radio" value="Seller" name="closingCosts" /> Seller
-                        <input type="radio" value="Buyer" name="closingCosts" /> Buyer
-                        <input type="radio" value="Split" name="closingCosts" /> Split
+                        <input type="radio" value="Seller" name="closingCosts" className="radio"/> Seller
+                        <input type="radio" value="Buyer" name="closingCosts" className="radio"/> Buyer
+                        <input type="radio" value="Split" name="closingCosts" className="radio"/> Split
                     </div> 
                 <label for="firstYear">Buyer's 1'st Year of use : </label>
                     <div className="firstYear">
@@ -1098,9 +1098,9 @@ const GetStarted = () => {
                     </div>
                 <label for="transferFee">Resort Transfer fee (if any) will be paid by: </label>
                     <div className="transferFee">
-                        <input type="radio" value="Seller" name="transferFee" /> Seller
-                        <input type="radio" value="Buyer" name="transferFee" /> Buyer
-                        <input type="radio" value="Split" name="transferFee" /> Split
+                        <input type="radio" value="Seller" name="transferFee" className="radio"/> Seller
+                        <input type="radio" value="Buyer" name="transferFee" className="radio"/> Buyer
+                        <input type="radio" value="Split" name="transferFee" className="radio"/> Split
                     </div> 
             </div>
 
@@ -1123,24 +1123,24 @@ const GetStarted = () => {
                 <label for="dues">Current Years Dues: $ </label>
                 <input type="text" className="form-control" id="dues" placeholder="" />
                     <div className="dues">Paid By: 
-                        <input type="radio" value="Seller" name="dues" /> Seller
-                        <input type="radio" value="Buyer" name="dues" /> Buyer
-                        <input type="radio" value="Split" name="dues" /> Split
+                        <input type="radio" value="Seller" name="dues" className="radio"/> Seller
+                        <input type="radio" value="Buyer" name="dues" className="radio"/> Buyer
+                        <input type="radio" value="Split" name="dues" className="radio"/> Split
                     </div>
                 <label for="taxes">All taxes included in Maintenance Fees? </label>
                     <div className="taxes">
-                        <input type="radio" value="Yes" name="taxes" /> Yes
-                        <input type="radio" value="No" name="taxes" /> No
+                        <input type="radio" value="Yes" name="taxes" className="radio"/> Yes
+                        <input type="radio" value="No" name="taxes" className="radio"/> No
                     </div>
                 <label for="special">Are there any special assessments? </label>
                     <div className="special">
-                        <input type="radio" value="Yes" name="special" /> Yes
-                        <input type="radio" value="No" name="special" /> No
+                        <input type="radio" value="Yes" name="special" className="radio"/> Yes
+                        <input type="radio" value="No" name="special" className="radio"/> No
                     </div>
                     <div className="assessment">Paid By: 
-                        <input type="radio" value="Seller" name="assessment" /> Seller
-                        <input type="radio" value="Buyer" name="assessment" /> Buyer
-                        <input type="radio" value="Split" name="assessment" /> Split
+                        <input type="radio" value="Seller" name="assessment" className="radio"/> Seller
+                        <input type="radio" value="Buyer" name="assessment" className="radio"/> Buyer
+                        <input type="radio" value="Split" name="assessment" className="radio"/> Split
                     </div>
             </div>
 
@@ -1150,8 +1150,8 @@ const GetStarted = () => {
                 <h3>Exchange Company</h3>
                 <label for="exchangeCompany">Are there any banked weeks transferred with this sale? </label>
                     <div className="exchangeCompany">
-                        <input type="radio" value="Yes" name="exchangeCompany" /> Yes
-                        <input type="radio" value="No" name="exchangeCompany" /> No
+                        <input type="radio" value="Yes" name="exchangeCompany" className="radio"/> Yes
+                        <input type="radio" value="No" name="exchangeCompany" className="radio"/> No
                     </div>
                 <p>Transfer of banked usage from seller to buyer is subject to a $50 document processing fee</p>
             </div>
@@ -1168,8 +1168,8 @@ const GetStarted = () => {
                 <input type="text" className="form-control" id="contactEmail" placeholder="" />
                 <label for="iAm"> </label>
                     <div className="iAm">
-                        <input type="radio" value="Seller" name="iAm" />Seller
-                        <input type="radio" value="Buyer" name="iAm" />Buyer
+                        <input type="radio" value="Seller" name="iAm" className="radio"/>Seller
+                        <input type="radio" value="Buyer" name="iAm" className="radio"/>Buyer
                     </div>
                 <label for="questions">Questions or Comments: </label>
                 <input type="text" className="form-control" id="questions" placeholder="" />

@@ -69,3 +69,7 @@ h3 {
     border-radius: 0;
     box-shadow: none;
 }
+
+.radio {
+    margin-left: 5px;
+}
