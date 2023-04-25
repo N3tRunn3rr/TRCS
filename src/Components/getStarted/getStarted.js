@@ -1,13 +1,13 @@
 import React from "react";
-
+import "../../styles/getStarted.css";
 
 const GetStarted = () => {
     return (
-        <form>
+        <form className="form-container">
             <div className="form-group">
                 <h3>Seller Information</h3>
                 <label for="sellerName">Owner: </label>
-                <input type="text" className="form-control" id="sellerName" placeholder="Enter your name" />
+                <input type="text" className="form-control" id="sellerName" placeholder="" />
                     <div className="marriage-status">
                         <input type="radio" value="Married" name="status" /> Married
                         <input type="radio" value="Single" name="status" /> Single
@@ -15,7 +15,7 @@ const GetStarted = () => {
                         <input type="radio" value="Widower" name="status" /> Widower
                     </div> 
                 <label for="co-owner">Co-Owner: </label>
-                <input type="text" className="form-control" id="co-owner" placeholder="Enter your name" />
+                <input type="text" className="form-control" id="co-owner" placeholder="" />
                     <div className="marriage-status">
                         <input type="radio" value="Married" name="co-status" /> Married
                         <input type="radio" value="Single" name="co-status" /> Single
@@ -23,13 +23,13 @@ const GetStarted = () => {
                         <input type="radio" value="Widower" name="co-status" /> Widower
                     </div> 
                 <label for="address">Address: </label>
-                <input type="text" className="form-control" id="address" placeholder="Enter your address" />
+                <input type="text" className="form-control" id="address" placeholder="" />
                 <label for="city">City: </label>
-                <input type="text" className="form-control" id="city" placeholder="Enter your city" />
+                <input type="text" className="form-control" id="city" placeholder="" />
                 <label for="state">State/Province: </label>
                     <p class="form-field state pd-select required">
-                        <label class="field-label" for="usstatevalue"></label>
-                        <select name="usstatevalue" id="usstatevalue" class="select" onchange="">
+                        <label class="field-label" for="statevalue"></label>
+                        <select name="statevalue" id="statevalue" class="select" onchange="">
                         <option value="" selected="selected"></option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -85,8 +85,8 @@ const GetStarted = () => {
                         </select>
                     </p>
                 <label for="country">Country: </label>
-                    <p class="form-field state pd-select required">
-                        <label class="field-label" for="usstatevalue"></label>
+                    <p class="form-field country pd-select required">
+                        <label class="field-label" for="countryValue"></label>
                         <select class="form-select" id="country" name="country">
                         <option>select country</option>
                         <option value="AF">Afghanistan</option>
@@ -344,11 +344,11 @@ const GetStarted = () => {
                     </select>
                     </p>
                 <label for="zip">Zip/Postal Code: </label>
-                <input type="text" className="form-control" id="zip" placeholder="Enter your zip code" />
+                <input type="text" className="form-control" id="zip" placeholder="" />
                 <label for="phone">Phone: </label>
-                <input type="text" className="form-control" id="phone" placeholder="Enter your phone number" />
+                <input type="text" className="form-control" id="phone" placeholder="" />
                 <label for="email">Email: </label>
-                <input type="text" className="form-control" id="email" placeholder="Enter your email" />
+                <input type="text" className="form-control" id="email" placeholder="" />
             </div>
 
             <br></br>
@@ -356,7 +356,7 @@ const GetStarted = () => {
             <div className="form-group">
                 <h3>Buyer Information</h3>
                 <label for="buyerName">Buyer 1 Name: </label>
-                <input type="text" className="form-control" id="buyerName" placeholder="Enter your name" />
+                <input type="text" className="form-control" id="buyerName" placeholder="" />
                     <div className="marriage-status">
                         <input type="radio" value="Married" name="buyer-status" /> Married
                         <input type="radio" value="Single" name="buyer-status" /> Single
@@ -364,7 +364,7 @@ const GetStarted = () => {
                         <input type="radio" value="Widower" name="buyer-status" /> Widower
                     </div> 
                 <label for="co-buyer">Buyer 2 Name: </label>
-                <input type="text" className="form-control" id="co-buyer" placeholder="Enter your name" />
+                <input type="text" className="form-control" id="co-buyer" placeholder="" />
                     <div className="marriage-status">
                         <input type="radio" value="Married" name="co-buyer" /> Married
                         <input type="radio" value="Single" name="co-buyer" /> Single
@@ -372,13 +372,13 @@ const GetStarted = () => {
                         <input type="radio" value="Widower" name="co-buyer" /> Widower
                     </div> 
                 <label for="address">Address: </label>
-                <input type="text" className="form-control" id="address" placeholder="Enter your address" />
+                <input type="text" className="form-control" id="address" placeholder="" />
                 <label for="city">City: </label>
-                <input type="text" className="form-control" id="city" placeholder="Enter your city" />
+                <input type="text" className="form-control" id="city" placeholder="" />
                 <label for="state">State/Province: </label>
                     <p class="form-field state pd-select required">
-                        <label class="field-label" for="usstatevalue"></label>
-                        <select name="usstatevalue" id="usstatevalue" class="select" onchange="">
+                        <label class="field-label" for="statevalue"></label>
+                        <select name="statevalue" id="statevalue" class="select" onchange="">
                         <option value="" selected="selected"></option>
                         <option value="" selected="selected"></option>
                         <option value="AL">Alabama</option>
@@ -435,8 +435,8 @@ const GetStarted = () => {
                         </select>
                     </p>
                 <label for="country">Country: </label>
-                    <p class="form-field state pd-select required">
-                        <label class="field-label" for="usstatevalue"></label>
+                    <p class="form-field country pd-select required">
+                        <label class="field-label" for="countryValue"></label>
                         <select class="form-select" id="country" name="country">
                         <option>select country</option>
                         <option value="AF">Afghanistan</option>
@@ -694,11 +694,11 @@ const GetStarted = () => {
                     </select>
                     </p>
                 <label for="zip">Zip/Postal Code: </label>
-                <input type="text" className="form-control" id="zip" placeholder="Enter your zip code" />
+                <input type="text" className="form-control" id="zip" placeholder="" />
                 <label for="phone">Phone: </label>
-                <input type="text" className="form-control" id="phone" placeholder="Enter your phone number" />
+                <input type="text" className="form-control" id="phone" placeholder="" />
                 <label for="email">Email: </label>
-                <input type="text" className="form-control" id="email" placeholder="Enter your email" />
+                <input type="text" className="form-control" id="email" placeholder="" />
             </div>
 
             <br></br>
@@ -706,15 +706,15 @@ const GetStarted = () => {
             <div className="form-group">
                 <h3>Property Information</h3>
                 <label for="resortName">Name of Resort: </label>
-                <input type="text" className="form-control" id="resortName" placeholder="Enter the name of the resort" />
+                <input type="text" className="form-control" id="resortName" placeholder="" />
                 <label for="resortAddress">Address of Resort: </label>
-                <input type="text" className="form-control" id="resortAddress" placeholder="Enter the address of the resort" />
+                <input type="text" className="form-control" id="resortAddress" placeholder="" />
                 <label for="resortCity">City: </label>
-                <input type="text" className="form-control" id="resortCity" placeholder="Enter the city of the resort" />
+                <input type="text" className="form-control" id="resortCity" placeholder="" />
                 <label for="resortState">State/Province: </label>
                     <p class="form-field state pd-select required">
-                        <label class="field-label" for="usstatevalue"></label>
-                        <select name="usstatevalue" id="usstatevalue" class="select" onchange="">
+                        <label class="field-label" for="statevalue"></label>
+                        <select name="statevalue" id="statevalue" class="select" onchange="">
                         <option value="" selected="selected"></option>
                         <option value="" selected="selected"></option>
                         <option value="AL">Alabama</option>
@@ -771,8 +771,8 @@ const GetStarted = () => {
                         </select>
                     </p>
                 <label for="resortCountry">Country: </label>
-                    <p class="form-field state pd-select required">
-                        <label class="field-label" for="usstatevalue"></label>
+                    <p class="form-field country pd-select required">
+                        <label class="field-label" for="countryValue"></label>
                         <select class="form-select" id="country" name="country">
                         <option>select country</option>
                         <option value="AF">Afghanistan</option>
@@ -1030,9 +1030,9 @@ const GetStarted = () => {
                     </select>
                     </p>
                 <label for="resortZip">Zip/Postal Code: </label>
-                <input type="text" className="form-control" id="resortZip" placeholder="Enter the zip code of the resort" />
+                <input type="text" className="form-control" id="resortZip" placeholder="" />
                 <label for="resortPhone">Phone: </label>
-                <input type="text" className="form-control" id="resortPhone" placeholder="Enter the phone number of the resort" />
+                <input type="text" className="form-control" id="resortPhone" placeholder="" />
                 <label for="ownershipStatus">Type of Ownership</label>
                     <div className="ownership-status">
                         <input type="radio" value="Deeded" name="ownership-status" /> Deeded
@@ -1040,11 +1040,11 @@ const GetStarted = () => {
                         <input type="radio" value="Don't Know" name="ownership-status" /> Don't Know
                     </div> 
                 <label for="rtu">If RTU, Expiration Date: </label>
-                <input type="text" className="form-control" id="rtu" placeholder="Enter the expiration date of your RTU" />
+                <input type="text" className="form-control" id="rtu" placeholder="" />
                 <label for="unitNumber">Unit #: </label>
-                <input type="text" className="form-control" id="unitNumber" placeholder="Enter the unit number" />
+                <input type="text" className="form-control" id="unitNumber" placeholder="" />
                 <label for="pointsNumber">Points #: </label>
-                <input type="text" className="form-control" id="pointsNumber" placeholder="Enter the points number" />
+                <input type="text" className="form-control" id="pointsNumber" placeholder="" />
                     <div className="management-status">
                         <input type="radio" value="Float" name="management-status" /> Float
                         <input type="radio" value="Fixed" name="management-status" /> Fixed
@@ -1052,9 +1052,9 @@ const GetStarted = () => {
                         <input type="radio" value="Other" name="management-status" /> Other
                     </div> 
                 <label for="mgmtCompany">Management Company Name: </label>
-                <input type="text" className="form-control" id="mgmtCompany" placeholder="Enter the management company" />
+                <input type="text" className="form-control" id="mgmtCompany" placeholder="" />
                 <label for="mgmtPhone">Management Company Phone: </label>
-                <input type="text" className="form-control" id="mgmtPhone" placeholder="Enter the management company phone number" />
+                <input type="text" className="form-control" id="mgmtPhone" placeholder="" />
             </div>
 
             <br></br>
@@ -1062,9 +1062,9 @@ const GetStarted = () => {
             <div className="form-group">
                 <h3>Transaction Details</h3>
                 <label for="purchasePrice">Purchase Price: $ </label>
-                <input type="text" className="form-control" id="purchasePrice" placeholder="Enter the purchase price" />
+                <input type="text" className="form-control" id="purchasePrice" placeholder="" />
                 <label for="Deposit"> Deposit: $ </label>
-                <input type="text" className="form-control" id="Deposit" placeholder="Enter the deposit" />
+                <input type="text" className="form-control" id="Deposit" placeholder="" />
                 <label for="holdEscrow">Will TRCS hold funds in escrow?  </label>
                     <div className="hold-escrow">
                         <p class="form-field state pd-select required">
@@ -1109,11 +1109,11 @@ const GetStarted = () => {
             <div className="form-group">
                 <h3>Seller's Existing Mortgage ( if applicable )</h3>
                 <label for="lenderName">Name of Lender: </label>
-                <input type="text" className="form-control" id="lenderName" placeholder="Enter the name of the lender" />
+                <input type="text" className="form-control" id="lenderName" placeholder="" />
                 <label for="lenderPhone">Lender Phone: </label>
-                <input type="text" className="form-control" id="lenderPhone" placeholder="Enter the lender phone number" />
+                <input type="text" className="form-control" id="lenderPhone" placeholder="" />
                 <label for="loanNumber">Loan Number:</label>
-                <input type="text" className="form-control" id="loanNumber" placeholder="Enter the loan number" />
+                <input type="text" className="form-control" id="loanNumber" placeholder="" />
             </div>
 
             <br></br>
@@ -1121,7 +1121,7 @@ const GetStarted = () => {
             <div className="form-group">
                 <h3>Maintenance & Taxes</h3>
                 <label for="dues">Current Years Dues: $ </label>
-                <input type="text" className="form-control" id="dues" placeholder="Enter the current years dues" />
+                <input type="text" className="form-control" id="dues" placeholder="" />
                     <div className="dues">Paid By: 
                         <input type="radio" value="Seller" name="dues" /> Seller
                         <input type="radio" value="Buyer" name="dues" /> Buyer
@@ -1161,20 +1161,20 @@ const GetStarted = () => {
             <div className="form-group">
                 <h3>Payment and Contact Information</h3>
                 <label for="contactName">Contact Name: </label>
-                <input type="text" className="form-control" id="contactName" placeholder="Enter the contact name" />
+                <input type="text" className="form-control" id="contactName" placeholder="" />
                 <label for="contactPhone">Contact Phone: </label>
-                <input type="text" className="form-control" id="contactPhone" placeholder="Enter the contact phone number" />
+                <input type="text" className="form-control" id="contactPhone" placeholder="" />
                 <label for="contactEmail">Contact Email: </label>
-                <input type="text" className="form-control" id="contactEmail" placeholder="Enter the contact email" />
+                <input type="text" className="form-control" id="contactEmail" placeholder="" />
                 <label for="iAm"> </label>
                     <div className="iAm">
                         <input type="radio" value="Seller" name="iAm" />Seller
                         <input type="radio" value="Buyer" name="iAm" />Buyer
                     </div>
                 <label for="questions">Questions or Comments: </label>
-                <input type="text" className="form-control" id="questions" placeholder="Enter any questions or comments" />
+                <input type="text" className="form-control" id="questions" placeholder="" />
                 <label for="reference">How did you hear about us?</label>
-                <input type="text" className="form-control" id="reference" placeholder="Enter how you heard about us" />
+                <input type="text" className="form-control" id="reference" placeholder="" />
                 <label for="payment">Payment Information </label>
                 <p>Please note that we accept Mastercard, Visa and Discover for the deposit (not to exceed $1000) or for payment of services rendered only – All other funds will have to be paid by wire transfer, cashier’s check, or money order.</p>
                 <button type="submit" className="btn btn-primary">Submit Closing</button>
