@@ -73,3 +73,7 @@ h3 {
 .radio {
     margin-left: 5px;
 }
+
+.country, .state, .escrow {
+    width: 300px;
+}
