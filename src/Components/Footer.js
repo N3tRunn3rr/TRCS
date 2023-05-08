@@ -5,13 +5,25 @@ const Footer = () => {
     <div>
     <Container className="text-center mt-5">
         <div className='contact-info'>
-          <h3>Contact Us</h3>
+          <h3>CONTACT US</h3>
           <a href='mailto:info@trcsinc.com'><button className='btn btn-primary contact-btn'>Email Us: info@trcsinc.com</button></a>
           <a href='tel:407-464-3935'><button className='btn btn-primary contact-btn'>Call Us: 407-464-3935</button></a>
         </div>
         <br></br>
-        <p> COPYRIGHT &copy; 2009 ALL RIGHTS RESERVED</p>
-        <p>This website is intended to provide general information regarding the transfer of timeshare properties and related services available from TRCS, Inc. This information does not constitute legal advice. Please seek legal advice if you have any legal questions. Changes happen very quickly in this industry; therefore, we do not guarantee the accuracy or availability of the content on this site or on other sites to which we link.</p>
+        <p> Mailing Address: &copy; 4417 13th Street #480, Saint Cloud FL 34769 </p>
+        <p>If you want additional information or have questions, feel free to reach out! </p>
+        <form>
+          <div className="form-group">
+            <label for="exampleFormControlInput1">Name:</label>
+            <input type="name" className="form-control" id="exampleFormControlInput1" placeholder="" />
+            <label for="exampleFormControlInput1">Email address:</label>
+            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="" />
+            <label for="exampleFormControlInput1">Phone:</label>
+            <input type="phone" className="form-control" id="exampleFormControlInput1" placeholder="" />
+            <label for="exampleFormControlTextarea1">How can we help?</label>
+            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </form>
       </Container>
     </div>
   );
