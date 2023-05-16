@@ -36,8 +36,8 @@ const Header = () => {
                 <div className="header-inner">
                     <div className="container position-relative">
                         <div className="row justify-content-between align-items-center">
-                            <div className="col-xl-2 col-auto order-0">
-                                <Logo className="header-logo"
+                            <div className="col-xl-4 col-auto order-0 header-logo">
+                                <Logo
                                     image={`${process.env.PUBLIC_URL}/TRCS_Logo.jpg`}
                                 />
                             </div>
