@@ -9,6 +9,7 @@ import Privacy from './components/Privacy/Privacy';
 import Services from './components/Services/Services';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Contact from './components/Contact/contact';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/links" element={<Links />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
     <Footer/>
   </>
