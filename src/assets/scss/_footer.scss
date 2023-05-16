@@ -2,12 +2,10 @@
 /*  12. Footer CSS
 /*----------------------------------------*/
 
-.footer-bg-color{
-    background-color: #030e22;
-}
 
 .footer-section {
-    padding: 100px 0 0px;
+   padding: 100px 0 0px;
+   margin-bottom: 0;
     overflow: hidden;
     // Responsive
     @media #{$tablet-device}{
@@ -27,3 +25,9 @@
     color: var(--clr-white);
     margin-bottom: 0;
 }
+  
+  
+  
+  
+  
+  
