@@ -37,7 +37,7 @@
     transform: translateX(100%);
 
     background-color: var(--clr-white);
-    background-image: url("../../images/bg/mobile-bg.jpg");
+    background-image: url("../../../../public/mobile-menu-background.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: top center;
@@ -94,7 +94,7 @@
     height: 80px;
     padding: 0 15px 0 30px;
 
-    background-color: var(--clr-heading);
+    background-color:rgb(51, 117, 196);
 }
 
 .mobile-menu-logo {
