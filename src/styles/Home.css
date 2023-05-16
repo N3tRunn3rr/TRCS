@@ -1,11 +1,11 @@
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
   }
   
   .homeContent {
     text-align: center;
+    padding-top: 0px;
   }
   
   h1 {
