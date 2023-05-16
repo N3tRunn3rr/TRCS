@@ -32,7 +32,7 @@ function FAQ() {
     {
         question: 'What are acceptable forms of payments for the final funds?',
         answer: 
-            'We accept cashier’s checks, wire transfers, ACH payments, Zelle or Money orders for the final funds. We DO NOT accept personal checks or credit cards for the final funds. l funds.',
+            'We accept cashier’s checks, wire transfers, ACH payments, Zelle or Money orders for the final funds. We DO NOT accept personal checks or credit cards for the final funds.',
     }
   ];
 

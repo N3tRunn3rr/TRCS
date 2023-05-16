@@ -1,5 +1,5 @@
 .carousel-root {
-    width: 34% !important;
+    width: 60% !important;
     margin: auto !important;
     margin-top: 3% !important;
   }
@@ -18,7 +18,7 @@
   .myCarousel {
     background: #fafafa;
     margin-top: -6%;
-    width: 54%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 6%;
