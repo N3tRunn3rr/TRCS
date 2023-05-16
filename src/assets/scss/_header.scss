@@ -45,6 +45,7 @@
         }
     }
 
+
     // Header Fluid
     &.header-fluid {
         & .container {
@@ -98,6 +99,10 @@
                 }
             }
         }
+    }
+
+    .header-logo {
+        height: 50px;
     }
 }
 

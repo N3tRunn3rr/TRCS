@@ -1,5 +1,6 @@
 import { Container } from 'react-bootstrap';
 import { useLocation} from 'react-router-dom';
+import '../styles/Footer.css';
 
 const Footer = () => {
   const { pathname } = useLocation();
@@ -8,7 +9,7 @@ const Footer = () => {
   
   return (
     <div>
-    <Container className="text-center mt-5">
+    <Container className="text-center mt-5 footer">
         <div className='contact-info'>
           <h3>CONTACT US</h3>
           <a href='mailto:info@trcsinc.com'><button className='btn btn-primary contact-btn'>Email Us: info@trcsinc.com</button></a>

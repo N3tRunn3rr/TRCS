@@ -1,8 +1,6 @@
 import {Fragment, useState, useEffect} from "react";
 import Logo from '../../components/logo/Logo';
 import NavBar from '../../components/NavBar/NavBar';
-import HeaderSearch from '../../components/HeaderSearch/HeaderSearch';
-import Btn from '../../components/Btn/Btn';
 import MobileMenu from "../../components/NavBar/MobileMenu"
 import MainSearch from "../../components/NavBar/MainSearch"
 
@@ -38,18 +36,14 @@ const Header = () => {
                 <div className="header-inner">
                     <div className="container position-relative">
                         <div className="row justify-content-between align-items-center">
-                            <div className="col-xl-2 col-auto order-0">
-                                <Logo 
-                                    image={`${process.env.PUBLIC_URL}/header_left.jpg`}
+                            <div className="col-xl-4 col-auto order-0 header-logo">
+                                <Logo
+                                    image={`${process.env.PUBLIC_URL}/TRCS_Logo.jpg`}
                                 />
                             </div>
                             <div className="col-auto col-xl d-flex align-items-center justify-content-xl-center justify-content-end order-2 order-xl-1">
                                 <div className="menu-column-area d-none d-xl-block position-static">
                                     <NavBar />
-                                </div>
-                                <div className="header-search-area ms-xl-7 ms-0">
-
-                                    <HeaderSearch onClick={onSearchHandler}/>
                                 </div>
 
                                 <div className="header-mobile-menu-toggle d-xl-none ms-sm-2">
@@ -59,10 +53,6 @@ const Header = () => {
                                         <i className="icon-bottom"></i>
                                     </button>
                                 </div>
-                            </div>
-
-                            <div className="col-xl-2 col d-none d-sm-flex justify-content-end order-1 order-xl-2">
-                                <Btn name='Buy Now' />
                             </div>
                         </div>
                     </div>
