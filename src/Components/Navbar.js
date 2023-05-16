@@ -40,6 +40,9 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/links">
             Links
             </Nav.Link>
+            <Nav.Link as={Link} to="/contact">
+            Contact
+            </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
