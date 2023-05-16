@@ -1,34 +1,43 @@
-import React from 'react';
+import {useEffect,  Suspense } from "react";
+import AOS from 'aos';
+import NavScrollTop from './components/NavScrollTop';
 import { Route, Routes } from 'react-router-dom';
-import About from './components/About';
-import Contact from './components/Contact';
-import FAQ from './components/FAQ';
-import GetStarted from './components/getStarted';
-import Home from './components/Home';
-import Links from './components/Links';
-import Privacy from './components/Privacy';
-import Services from './components/Services';
-import Navbar from './components/Navbar';
+import About from './components/About/About';
+import FAQ from './components/FAQ/FAQ';
+import Home from './components/Home/Home';
+import Contact from "./components/Contact/contact";
+import Header from './partials/header/Header';
 import Footer from './components/Footer';
+
 function App() {
+  useEffect(() => {
+    AOS.init({
+        offset: 80,
+        duration: 1000,
+        once: true,
+        easing: 'ease',
+    });
+    AOS.refresh();
+    
+  }, [])
   return (
     <>
-    <Navbar/>
+    <Header/>
+    <NavScrollTop>
+          <Suspense fallback={<div />}>
     <Routes>
     <Route
         exact
         path="/"
         element={<Home/>}
       />
-      <Route path="/services" element={<Services />} />
-      <Route path="/getstarted" element={<GetStarted />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/privacy" element={<Privacy />} />
-      <Route path="/links" element={<Links />} />
     </Routes>
     <Footer/>
+    </Suspense>
+    </NavScrollTop>
   </>
   );
 }
