@@ -1,6 +1,11 @@
 import { Container } from 'react-bootstrap';
+import { useLocation} from 'react-router-dom';
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  console.log(pathname);
+  if (pathname === '/contact') return null;
+  
   return (
     <div>
     <Container className="text-center mt-5">
