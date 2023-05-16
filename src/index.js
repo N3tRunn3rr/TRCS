@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'swiper/css';
+import "aos/dist/aos.css";
+import './assets/scss/style.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
