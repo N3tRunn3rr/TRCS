@@ -1,7 +1,4 @@
-import React from 'react';
 const recipient = 'kwf1999@gmail.com';
-
-
 
 
 const submit = (data) => {
