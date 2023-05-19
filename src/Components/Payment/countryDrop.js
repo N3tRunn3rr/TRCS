@@ -3,7 +3,7 @@ import React from 'react';
 function CountryDropdown() {
     return (
         <p className="form-field country pd-select required">
-            <label className="field-label" for="countryValue"></label>
+            <label className="field-label" for="countryValue">Country</label>
                 <select className="form-select" id="country" name="country">
                 <option value="" selected="selected"></option>
                 <option value="AF">Afghanistan</option>
