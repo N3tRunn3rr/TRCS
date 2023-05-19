@@ -8,6 +8,7 @@ import Home from './components/Home/Home';
 import Contact from "./components/Contact/contact";
 import Header from './components/Header/Header';
 import Footer from './components/Footer';
+import Payment from './components/Payment/payment';
 
 function App() {
   useEffect(() => {
@@ -34,6 +35,7 @@ function App() {
       <Route path="/faq" element={<FAQ />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/payment" element={<Payment />} />
     </Routes>
     <Footer/>
     </Suspense>
