@@ -7,7 +7,10 @@ import Country from './countryDrop'
 const AuthorizeCreditCard = () => {
     const [fname, setFname] = useState('');
     const [lname, setLname] = useState('');
+    const [company, setCompany] = useState('');
     // const [reference, setReference] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [cc, setCc] = useState('');
     const [cvv, setCvv] = useState('');
     const [exp, setExp] = useState('');
@@ -19,10 +22,17 @@ const AuthorizeCreditCard = () => {
     const [country, setCountry] = useState('');
     const [apiResponseMessage, setApiResponseMessage] = useState('');
     const [apiResponseSuccess, setApiResponseSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
 
-    const apiLoginKey = '4Nq5qxGZ6a';
-    const transactionKey = '45sM5bXG4ca9A5JD';
+    // created an env file for security reasons, just add two fields to it worded exactly like it looks after process.env
+    const apiLoginKey = process.env.REACT_APP_API_LOGIN_KEY;
+    const transactionKey = process.env.REACT_APP_TRANSACTION_KEY;
+    // speaking of security, we may need to add server-side code to more thoroughly ensure this info isn't getting intercepted (stuff like OAuth). will look into this once this code is functional.
+
     const makeTransactionRequest = () => {
+
+        setLoading(true);
+
         const merchantAuthenticationType = new APIContracts.MerchantAuthenticationType();
         merchantAuthenticationType.setName(apiLoginKey);
         merchantAuthenticationType.setTransactionKey(transactionKey);
@@ -35,33 +45,43 @@ const AuthorizeCreditCard = () => {
         const paymentType = new APIContracts.PaymentType();
         paymentType.setCreditCard(creditCard);
     
-        const orderDetails = new APIContracts.OrderType();
-        // unsure if this is needed
-        orderDetails.setInvoiceNumber();
-        orderDetails.setDescription('Product Description');
+        // const orderDetails = new APIContracts.OrderType();
+        // // unsure if this is needed. maybe for the step after authorization
+        // orderDetails.setInvoiceNumber();
+        // orderDetails.setDescription('Product Description');
     
         const billTo = new APIContracts.CustomerAddressType();
         billTo.setFirstName(fname);
         billTo.setLastName(lname);
+        billTo.setEmail(email);
+        billTo.setPhoneNumber(phone);
         billTo.setAddress(address);
+        billTo.setCompany(company);
         billTo.setCity(city);
         billTo.setState(state);
         billTo.setZip(zip);
         billTo.setCountry(country);
-    
+       
+
         const shipTo = new APIContracts.CustomerAddressType();
         shipTo.setFirstName(fname);
         shipTo.setLastName(lname);
+        shipTo.setEmail(email);
+        shipTo.setPhoneNumber(phone);
         shipTo.setAddress(address);
+        shipTo.setCompany(company);
         shipTo.setCity(city);
         shipTo.setState(state);
         shipTo.setZip(zip);
         shipTo.setCountry(country);
+        
     
         const transactionRequestType = new APIContracts.TransactionRequestType();
         transactionRequestType.setTransactionType(APIContracts.TransactionTypeEnum.AUTHONLYTRANSACTION);
         transactionRequestType.setPayment(paymentType);
         transactionRequestType.setAmount(amount);
+        transactionRequestType.setBillTo(billTo);
+        transactionRequestType.setShipTo(shipTo);
     
         const createRequest = new APIContracts.CreateTransactionRequest();
         createRequest.setMerchantAuthentication(merchantAuthenticationType);
@@ -94,6 +114,8 @@ const AuthorizeCreditCard = () => {
   }
 
   console.log(response);
+
+  setLoading(false);
 });
       };
 
@@ -108,12 +130,16 @@ const AuthorizeCreditCard = () => {
 
     return (
         <div className="payment">
-            {apiResponseMessage && (
-      <div>
-        {apiResponseSuccess ? 'Transaction Successful: ' : 'Transaction Failed: '}
-        {apiResponseMessage}
-      </div>
-    )}
+        {loading ? (
+            <div>Loading...</div>
+        ) : (
+            <>
+                {apiResponseMessage && (
+                    <div>
+                        {apiResponseSuccess ? 'Transaction Successful: ' : 'Transaction Failed: '}
+                        {apiResponseMessage}
+                    </div>
+                )}
         <form onSubmit={handleSubmit}>
             <label htmlFor="date">Date</label>
             <input type="date" id="date" name='date' required></input>
@@ -122,14 +148,16 @@ const AuthorizeCreditCard = () => {
             <label htmlFor="lname">Last Name</label>
             <input type="text" id="lname" value={lname} onChange={(e) => setLname(e.target.value)} placeholder='As it appears on credit card' required></input>
             <label htmlFor="resort">Resort</label>
-            <input type="text" id="resort" name='resort' placeholder='Enter resort value' required></input>
+            <input type="text" id="resort" value={company} onChange={(e) => setCompany(e.target.value)} placeholder='Enter resort value' required></input>
             <label htmlFor='reference'>Reference</label>
+            {/* I have no idea what to do with reference. I don't think it's needed but it's staying until further notice */}
             <input type='text' id='reference' value='reference' placeholder='Enter reference' required></input>
             <label htmlFor="cardNum">Credit Card No.</label>
             <input type="text" id="cardNum" value={cc} onChange={(e) => setCc(e.target.value)} placeholder='Enter 16 digit card number' required></input>
             <label htmlFor="cardId">Card Identification No.</label>
             <input type="text" id="cardId" value={cvv} onChange={(e) => setCvv(e.target.value)} placeholder='Enter 3 digit card identification number or 4 digits on front of card htmlFor Amex' required></input>
             <label htmlFor="cardType">Type of Card</label>
+            {/* I don't think we need cardType, at least for this step, I don't see it anywhere in the documentation */}
             <select id="cardType" value="cardType" required>
                 <option value="visa">Visa</option>
                 <option value="mastercard">Mastercard</option>
@@ -143,9 +171,9 @@ const AuthorizeCreditCard = () => {
             <label htmlFor="amount">Amount</label>
             <input type="text" id="amount" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder='Enter amount to be paid' required></input>
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" value="email" placeholder='Enter email address' required></input>
+            <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}  placeholder='Enter email address' required></input>
             <label htmlFor="phone">Phone</label>
-            <input type="tel" id="phone" value="phone" placeholder='Enter phone number' required></input>
+            <input type="tel" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='Enter phone number' required></input>
             <label htmlFor="address">Billing Address</label>
             <input type="text" id="address" value={address} onChange={(e) => setAddress(e.target.value)} placeholder='Enter address' required></input>
             <label htmlFor="city">City</label>
@@ -156,6 +184,8 @@ const AuthorizeCreditCard = () => {
             <Country selectedValue={country} onChange={(e) => setCountry(e.target.value)} />
             <button type="submit" className="btn btn-primary">Submit</button>
         </form>
+        </>
+        )}
     </div>
 )
 };
