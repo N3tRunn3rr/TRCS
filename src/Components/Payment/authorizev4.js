@@ -102,6 +102,10 @@ const AuthorizeCreditCard = () => {
         makeTransactionRequest();
     };
 
+    // we may need more or less, I've just been looking at the documentation for how authorizenet authorizes credit cards in node and trying to convert it to react.
+    // thankfully if we also need to send this capture out like I'm assuming we have to, the code is very similar. 
+    // here's the specific file i was looking at if you get to it before me: https://github.com/AuthorizeNet/sample-code-node/blob/master/PaymentTransactions/authorize-credit-card.js
+
     return (
         <div className="payment">
             {apiResponseMessage && (
