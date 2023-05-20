@@ -1,10 +1,10 @@
 import React from 'react';
 
-function StateDropdown() {
+function StateDropdown({selectedValue, onChange}) {
     return (
         <p className="form-field state pd-select required">
             <label className="field-label" for="stateValue">State</label>
-                <select className="form-select" id="state" name="state">
+                <select className="form-select" id="state" value={selectedValue} onChange={onChange}>
                     <option value="" selected="selected"></option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
