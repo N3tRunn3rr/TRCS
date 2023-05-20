@@ -3,6 +3,10 @@ import { APIContracts, APIControllers } from 'authorizenet';
 import State from './stateDrop';
 import Country from './countryDrop'
 
+// we'll probably be able to move all this over so that it's just the form again, 
+// I just didn't want to fuck with anything while I was figuring this out.
+// also authorizenet has a node package that I believe we can use instead of axios/fetch, just npm install authorizenet
+// I'm also not testing this until tomorrow bc I fear the adderall will win and I'll be up until 3AM working on it
 
 const AuthorizeCreditCard = () => {
     const [fname, setFname] = useState('');
@@ -24,10 +28,12 @@ const AuthorizeCreditCard = () => {
     const [apiResponseSuccess, setApiResponseSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    // created an env file for security reasons, just add two fields to it worded exactly like it looks after process.env
+    // created an env file for security reasons, once you merge it in we'll add it to the gitignore and take it off the repository
     const apiLoginKey = process.env.REACT_APP_API_LOGIN_KEY;
     const transactionKey = process.env.REACT_APP_TRANSACTION_KEY;
-    // speaking of security, we may need to add server-side code to more thoroughly ensure this info isn't getting intercepted (stuff like OAuth). will look into this once this code is functional.
+    // speaking of security, we may need to add server-side code to more thoroughly ensure this info isn't getting intercepted
+    // (stuff like OAuth). I believe authorizenet has us covered but it doesn't hurt to be overly safe.
+    //  We can look into this once this code is functional.
 
     const makeTransactionRequest = () => {
 
@@ -44,11 +50,6 @@ const AuthorizeCreditCard = () => {
     
         const paymentType = new APIContracts.PaymentType();
         paymentType.setCreditCard(creditCard);
-    
-        // const orderDetails = new APIContracts.OrderType();
-        // // unsure if this is needed. maybe for the step after authorization
-        // orderDetails.setInvoiceNumber();
-        // orderDetails.setDescription('Product Description');
     
         const billTo = new APIContracts.CustomerAddressType();
         billTo.setFirstName(fname);
@@ -124,9 +125,11 @@ const AuthorizeCreditCard = () => {
         makeTransactionRequest();
     };
 
-    // we may need more or less, I've just been looking at the documentation for how authorizenet authorizes credit cards in node and trying to convert it to react.
+    // we may need more or less, I've just been looking at the documentation for how authorizenet authorizes credit cards
+    // in node and trying to convert it to react.
     // thankfully if we also need to send this capture out like I'm assuming we have to, the code is very similar. 
-    // here's the specific file i was looking at if you get to it before me: https://github.com/AuthorizeNet/sample-code-node/blob/master/PaymentTransactions/authorize-credit-card.js
+    // here's the specific file i was looking at if you get to it before me:
+    //  https://github.com/AuthorizeNet/sample-code-node/blob/master/PaymentTransactions/authorize-credit-card.js
 
     return (
         <div className="payment">
