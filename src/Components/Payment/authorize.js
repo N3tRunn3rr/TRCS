@@ -1,22 +1,22 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { APIContracts, APIControllers } from 'authorizenet';
 
 const AuthorizeCreditCard = () => {
+    const [fname, setFname] = useState('');
+    const [lname, setLname] = useState('');
+    const [reference, setReference] = useState('');
+    const [cc, setCc] = useState('');
+    const [cvv, setCvv] = useState('');
+    const [exp, setExp] = useState('');
+    const [amount, setAmount] = useState('');
+    const [address, setAddress] = useState('');
+    const [city, setCity] = useState('');
+    const [state, setState] = useState('');
+    const [zip, setZip] = useState('');
+    const [country, setCountry] = useState('');
   useEffect(() => {
     const apiLoginKey = '4Nq5qxGZ6a';
     const transactionKey = '45sM5bXG4ca9A5JD';
-    const fname = document.getElementById('fname').value;
-    const lname = document.getElementById('lname').value;
-    const reference = document.getElementById('reference').value;
-    const cc = document.getElementById('cardNum').value;
-    const cvv = document.getElementById('cardId').value;
-    const exp = document.getElementById('expDate').value;
-    const amount = document.getElementById('amount').value;
-    const address = document.getElementById('address').value;
-    const city = document.getElementById('city').value;
-    const state = document.getElementById('state').value;
-    const zip = document.getElementById('zip').value;
-    const country = document.getElementById('country').value;
 
 
     const merchantAuthenticationType = new APIContracts.MerchantAuthenticationType();
@@ -72,9 +72,19 @@ const AuthorizeCreditCard = () => {
 
       console.log(response);
     });
-  }, []);
+  }, [fname, lname, reference, cc, cvv, exp, amount, address, city, state, zip, country]);
 
   return null;
 };
 
 export default AuthorizeCreditCard;
+
+// example of how to structure form when imported into main file (I don't think this can be kept separate from our form, sorry)
+// {/* <label htmlFor="fname">First Name:</label>
+//       <input type="text" id="fname" value={fname} onChange={(e) => setFname(e.target.value)} />
+
+//       <label htmlFor="lname">Last Name:</label>
+//       <input type="text" id="lname" value={lname} onChange={(e) => setLname(e.target.value)} />
+
+//       <label htmlFor="reference">Reference:</label>
+//       <input type="text" id="reference" value={reference} onChange={(e) => setReference(e.target.value)} /> */}
