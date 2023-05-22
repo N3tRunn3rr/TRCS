@@ -2,9 +2,7 @@ import React from 'react';
 
 function CountryDropdown({selectedValue, onChange}) {
     return (
-        <p className="form-field country pd-select required">
-            <label className="field-label" for="countryValue">Country</label>
-                <select className="form-select" id="country" value={selectedValue} onChange={onChange}>
+            <select className="form-select" id="country" value={selectedValue} onChange={onChange}>
                 <option value="" selected="selected"></option>
                 <option value="AF">Afghanistan</option>
                 <option value="AX">Aland Islands</option>
@@ -259,7 +257,6 @@ function CountryDropdown({selectedValue, onChange}) {
                 <option value="ZM">Zambia</option>
                 <option value="ZW">Zimbabwe</option>
             </select>
-        </p>
     );
 }
 
