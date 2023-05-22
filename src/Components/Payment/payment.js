@@ -56,6 +56,7 @@ const payment = () => {
                 <br></br>
                 <label htmlFor="countryValue">Country</label>
                 <Country />
+                <br></br>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
