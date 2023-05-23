@@ -1,18 +1,24 @@
-.form-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -5px;
-    margin-left: -5px;
+.payment {
+    width: 100%;
+    align-items: center;
     justify-content: center;
-}
-
-.form-container {
+    position: relative;
+    padding-left: 75px;
+    padding-right: 75px;
     max-width: 750px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+    justify-content: center;
 }
 
 .form-group {
@@ -62,18 +68,19 @@ h3 {
     margin-bottom: 20px;
 }
 
-.select.form-control {
+.form-select {
     font-size: 1.2rem;
     background-color: #f2f2f2;
-    border: none;
-    border-radius: 0;
+    border: rounded 0;
     box-shadow: none;
-}
-
-.radio {
-    margin-left: 5px;
-}
-
-.country, .state, .escrow {
     width: 300px;
+}
+
+#zip {
+    width: 100px;
+    padding-left: 25px;
+}
+
+#zipLabel, #dateLabel, #cardLabel, #expLabel {
+    padding-right: 10px;
 }

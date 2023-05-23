@@ -1,4 +1,4 @@
-
+import '../../styles/process.css'
 
 function Process(event) {
     event.preventDefault();

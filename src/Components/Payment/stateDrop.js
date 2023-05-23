@@ -2,8 +2,6 @@ import React from 'react';
 
 function StateDropdown({selectedValue, onChange}) {
     return (
-        <p className="form-field state pd-select required">
-            <label className="field-label" for="stateValue">State</label>
                 <select className="form-select" id="state" value={selectedValue} onChange={onChange}>
                     <option value="" selected="selected"></option>
                     <option value="AL">Alabama</option>
@@ -58,7 +56,6 @@ function StateDropdown({selectedValue, onChange}) {
                     <option value="WI">Wisconsin</option>
                     <option value="WY">Wyoming</option>       
                 </select>
-        </p>
     );
 }
 
