@@ -14,7 +14,7 @@ const Contact = () => {
               <a href='tel:407-464-3935'><button className='btn btn-primary contact-btn'>407-464-3935</button></a>
             </div>
             <br></br>
-            <p> Mailing Address: &copy; 4417 13th Street #480, Saint Cloud FL 34769 </p>
+            <p> Mailing Address: &copy; 4853 E. Irlo Bronson Memorial Hwy. #1001, St.Cloud FL 34771 </p>
             <p>If you want additional information or have questions, feel free to reach out! </p>
             <form onSubmit={submit}>
               <div className="form-group">
