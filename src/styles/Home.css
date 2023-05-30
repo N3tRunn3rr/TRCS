@@ -1,6 +1,7 @@
 .container {
-    max-width: 800px;
+    max-width: 80%;
     margin: 0 auto;
+    background-image: 'home.jpg';
   }
   
   .homeContent {
@@ -47,3 +48,6 @@
     font-size: 1.2rem;
   }
   
+.carousel {
+  width: 75%;
+}

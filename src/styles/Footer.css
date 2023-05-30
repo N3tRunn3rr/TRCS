@@ -1,0 +1,20 @@
+.disclaimer {
+    font-size: 12px;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mail-anchor, .tel-anchor, .address-anchor {
+    float: left;
+    display: flex;
+}
+
+.footer-logo {
+    width: 150px;
+    height: 150px;
+    margin-right: 25px;
+    display: flex;
+    float: left;
+    
+}
