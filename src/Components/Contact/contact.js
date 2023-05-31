@@ -3,6 +3,8 @@ import '../../styles/Contact.css'
 import submit from './submit';
 
 
+// was looking at an alternate contact form that I like, I'm going to look at implementing it tomorrow and changing the colors and size, etc. but here's the codepen I was looking at for it: https://codepen.io/cojdev/pen/LMZVqj
+
 const Contact = () => {
     return (
         <div>
