@@ -10,42 +10,50 @@ const Footer = () => {
 
   return (
     <div className="footer-section section footer-bg-color">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col mb-2">
-            <div className="footer-widget">
-              <div className="footer-logo text-center mb-1 position-relative">
-                <Logo image={`${process.env.PUBLIC_URL}/TRCS_Logo.jpg`} />
+      <div className="footer-container">
+        <div className="row">
+          <div className="col-12 col-md-4 mb-2">
+            <div className="footer-widget d-flex flex-column align-items-center">
+              <div className="footer-widget-content text-center position-absolute">
+                <div className="content">
+                  <Logo image={`${process.env.PUBLIC_URL}/TRCS_Logo.jpg`} />
+                </div>
               </div>
+            </div>
+          </div>
+          <div className="col-12 col-md-4 mb-2">
+            <div className="footer-widget d-flex flex-column align-items-center">
               <div className="footer-widget-content text-center position-relative">
                 <div className="content">
                   <div className="icon-text">
                     <Envelope />
-                    <div>
-                      <a className="mail-anchor" href="mailto:info@trcsinc.com">
-                        info@trcsinc.com
-                      </a>
-                    </div>
+                    <a className="mail-anchor" href="mailto:info@trcsinc.com">
+                      info@trcsinc.com
+                    </a>
                   </div>
                   <div className="icon-text">
                     <Telephone />
-                    <div>
-                      <a className="tel-anchor" href="tel:407-464-3935">
-                        (407)-464-3935
-                      </a>
-                    </div>
+                    <a className="tel-anchor" href="tel:407-464-3935">
+                      (407)-464-3935
+                    </a>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-md-4 mb-2">
+            <div className="footer-widget d-flex flex-column align-items-center">
+              <div className="footer-widget-content text-center position-relative">
+                <div className="content">
                   <div className="icon-text">
                     <PinMap />
-                    <div>
-                      <a
-                        className="address-anchor"
-                        href="https://goo.gl/maps/5eZEPt7kfTNGtdKc9"
-                      >
-                        4853 E. Irlo Bronson Memorial Hwy. #1001, St.Cloud FL
-                        34771
-                      </a>
-                    </div>
+                    <a
+                      className="address-anchor"
+                      href="https://goo.gl/maps/5eZEPt7kfTNGtdKc9"
+                    >
+                      4853 E. Irlo Bronson Memorial Hwy. #1001, St.Cloud FL
+                      34771
+                    </a>
                   </div>
                 </div>
               </div>
